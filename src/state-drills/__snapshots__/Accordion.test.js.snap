@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion Components component opens a clicked section 1`] = `
+<ul>
+  <div
+    key="0"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+  </div>
+  <div
+    key="1"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+    </li>
+    <p>
+      Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
+    </p>
+  </div>
+  <div
+    key="2"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+    </li>
+  </div>
+</ul>
+`;
+
+exports[`Accordion Components component opens a clicked section and closes other sections 1`] = `
+<ul>
+  <div
+    key="0"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+  </div>
+  <div
+    key="1"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+    </li>
+  </div>
+  <div
+    key="2"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+    </li>
+    <p>
+      Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
+    </p>
+  </div>
+</ul>
+`;
+
+exports[`Accordion Components renders empty given no tabs 1`] = `<ul />`;
+
+exports[`Accordion Components renders the first tab by default 1`] = `
+<ul>
+  <div
+    key="0"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </div>
+  <div
+    key="1"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+    </li>
+  </div>
+  <div
+    key="2"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+    </li>
+  </div>
+</ul>
+`;

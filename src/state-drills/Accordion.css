@@ -1,0 +1,18 @@
+.section-title-style{
+    list-style: none;
+}
+
+.section-title-style button{
+    width: 100%;
+    border: none;
+    font-size: 25px;
+    background: rgb(71, 159, 194);
+    color: white;
+    margin-bottom: 5px;
+}
+
+ul{
+    padding: 0 10px 0 10px;
+}
+
+
