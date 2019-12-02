@@ -1,27 +1,66 @@
-import React, {Component} from 'react';
-import './App.css';
-import Accordion from './state-drills/Accordion';
+import React from 'react';
+import AddItemForm from './shopping-list/AddItemForm';
+import ShoppingList from './shopping-list/ShoppingList';
 
-const sections = [
-  {
-    title: 'Section 1',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    title: 'Section 2',
-    content: 'Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!',
-  },
-  {
-    title: 'Section 3',
-    content: 'Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?',
-  },
-]
+class App extends React.Component{
+  state = {
+    shoppingItems:[
+      {name: 'apples', checked: false},
+      {name: 'oranges', checked: true},
+      {name: 'bread', checked: false},
+    ]
+  };
 
-class App extends Component {
-  
-  render() {
+  handleDeleteItem = (item) => {
+    const newItems = this.state.shoppingItems.filter(itm => itm !== item)
+    this.setState({
+      shoppingItems: newItems
+    })
+  }
+
+  handleCheckItem = (item) => {
+    const newItems = this.state.shoppingItems.map(itm => {
+      if(itm === item){
+        itm.checked = !itm.checked
+      }
+      return itm
+    })
+    this.setState({
+      shoppingItems: newItems
+    })
+  }
+
+  handleAddItem = (itemName) => {
+    const newItems = [
+      ...this.state.shoppingItems,
+      {name: itemName, checked: false}
+    ]
+    this.setState({
+      shoppingItems: newItems
+    })
+  }
+
+  render(){
     return (
-      <Accordion sections={sections}/>
+      <>
+        <header>
+          <h1>Shopping List</h1>
+        </header>
+        <main>
+          <section>
+            <AddItemForm 
+              onAddItem = {this.handleAddItem}
+            />
+          </section>
+          <section>
+            <ShoppingList 
+              items={this.state.shoppingItems} 
+              onDeleteItem = {this.handleDeleteItem}
+              onCheckItem = {this.handleCheckItem}
+            />
+          </section>
+        </main>
+      </>
     )
   }
 }
